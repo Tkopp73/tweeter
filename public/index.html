@@ -7,23 +7,105 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!--font style link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+
+    <!--font-awesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!--<meta name='viewport' content='width=device-width, initial-scale=1>' -->
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span id="title">tweeter</span>
+      <div class="rightSide">
+        <span>Write new tweet</span>
+        <span class="arrow"><i class="fa-solid fa-angles-down"></i></span>
+      </div>
     </nav>
 
+    <header class="profile">
+      <div>
+          <img src="/images/profile-hex.png">              
+      </div>
+      <br>
+      <div>
+          <h2>Tim Kopplin</h2>
+      </div>
+  </header>
+</body>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <div id="newTweet">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+
+      <main class="theTweets">
+        <article class="tweetContainer">
+          <header class="tweetHeader">
+            <div class="tweetProfile">
+              <img src="https://i.imgur.com/73hZDYK.png" class="avatar">
+              <h3>Newton</h3>
+            </div>
+            <p class="profileTag">@SirIsaac</p>
+          </header>
+          <div class="contentContainer">
+            <p class="tweetContent">If I have seen further it is by standing on the shoulders of giants</p>
+          </div>
+          <footer class="tweetFooter">
+            <p class="datePosted" >10 days ago</p>
+            <div class="reactContainer">
+              <p class="reaction"><i class="fa-solid fa-flag"></i></p>
+              <p class="reaction"><i class="fa-solid fa-retweet"></i></p>
+              <p class="reaction"><i class="fa-solid fa-heart"></i></p>
+            </div>
+          </footer>
+        </article>
+        <article class="tweetContainer">
+          <header class="tweetHeader">
+            <div class="tweetProfile">
+              <img src="https://i.imgur.com/nlhLi3I.png" class="avatar">
+              <h3>Descartes</h3>
+            </div>
+            <p class="profileTag">@rd</p>
+          </header>
+          <div class="contentContainer">
+            <p class="tweetContent">Je pense , donc je suis</p>
+          </div>
+          <footer class="tweetFooter">
+            <p class="datePosted" >10 days ago</p>
+            <div class="reactContainer">
+              <p class="reaction"><i class="fa-solid fa-flag"></i></p>
+              <p class="reaction"><i class="fa-solid fa-retweet"></i></p>
+              <p class="reaction"><i class="fa-solid fa-heart"></i></p>
+            </div>
+          </footer>
+        </article>
+      </main>
+    </main>
+
 </html>

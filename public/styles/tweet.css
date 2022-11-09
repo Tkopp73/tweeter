@@ -1,0 +1,75 @@
+.theTweets {
+  margin: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  
+}
+
+.tweetContainer {
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.tweetHeader {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweetProfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #3e3e3e;
+  
+}
+
+.avatar {
+  margin: 10px;
+  height: 50px;
+}
+
+.profileTag {
+  margin: 10px;
+  color: #a2a2a2
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline:  10px;
+}
+
+.tweetContent {
+  border-bottom: 3px solid black;
+  display: flex;
+  color: #3e3e3e;
+  margin-left: 5px;
+
+}
+
+.tweetFooter {
+  display: flex;
+  color: #3e3e3e;
+  justify-content: space-between;
+  margin-inline: 25px;
+}
+
+.datePosted {
+  margin-top: 0;
+}
+
+.reactContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.reaction{
+  margin: 0;
+  padding-inline: 2px;
+}
