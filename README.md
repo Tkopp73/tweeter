@@ -6,6 +6,10 @@ This repository is the  code for my project.
 Thank you for looking at this file.
 I hope you will enjoy what I have created.
 
+## Screenshots
+!["Screenshot of the desktop version of my tweeter page"](https://github.com/Tkopp73/tweeter/blob/master/WideTweeterPage.png)
+!["Screenshot of the mobile version of my tweeter page"](https://github.com/Tkopp73/tweeter/blob/master/shortend-tweeter-page.png)
+
 ## Getting Started
 
 1. Install dependencies using the `npm install` command.
