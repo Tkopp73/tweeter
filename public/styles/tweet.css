@@ -1,3 +1,5 @@
+
+/* the article container */
 .theTweets {
   margin: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
@@ -6,6 +8,7 @@
   flex-direction: column-reverse;
 }
 
+/* individual tweet container */
 .tweetContainer {
   border: 3px solid black;
   display: flex;
@@ -13,6 +16,8 @@
   width: 100%;
   margin-bottom: 1.5em;
 }
+
+/* dropshadow */
 .tweetContainer:hover {
   border: 3px solid black;
   display: flex;
@@ -22,8 +27,9 @@
   box-shadow: 5px 5px 5px #3e3e3e;
 }
 
-.tweetHeader {
 
+ /* Below inside the tweet */
+.tweetHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;

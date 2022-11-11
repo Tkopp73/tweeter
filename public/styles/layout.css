@@ -14,7 +14,7 @@ html {
  * Global layout stuff
  */
 
-
+/* the user profile */
 .profile {
   padding-top: 120px;
   display: flex;
@@ -45,6 +45,7 @@ html {
   color: #a2a2a2;
 }
 
+/* error */
 #errorContainer {
   display: flex;
   flex-direction: column;
@@ -64,6 +65,7 @@ html {
   margin: 1em;
 }
 
+/* nav bar */
 #title {
   margin-left: 1.5em;
   align-self: flex-end;
@@ -92,7 +94,7 @@ nav{
   color: #FFFFFF;
  }
 
-
+/* conditional code */
  @media (min-width: 700px){
   #mainContainer {
     display: flex;

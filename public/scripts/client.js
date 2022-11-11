@@ -6,12 +6,15 @@
 // import {format} from '../index.html';
 // const {format} = require('../index.html');
 
+
+// reading through an array to create tweets
 const renderTweet = (tweets) => {
   for (const tweet of tweets) {
     $(".theTweets").append(createTweetElement(tweet));
   }
 }
 
+// creates the tweet element
 const createTweetElement = (data) => {
   const tweetElement = `
   <article class="tweetContainer">
@@ -38,12 +41,14 @@ const createTweetElement = (data) => {
   return tweetElement;
 }
 
+// cleans up the content to prevent code being used in the text area
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// creates the tweet from the text line
 const newTweet = () => {
   const name = document.getElementById("name").innerHTML;
   const handle = document.getElementById("handle").innerHTML;
@@ -63,9 +68,12 @@ const newTweet = () => {
   $(".theTweets").append(createTweetElement(newData));
 }
 
+
+// when the document is ready
 $(document).ready(() => {
   document.getElementById("errorMessage").style.display = "none";
   
+  // -------when the submit button is clicked -------
   const handlingSubmit = event => {
     event.preventDefault();
     if ($('#tweet-text').val().length > 140) {
@@ -84,14 +92,15 @@ $(document).ready(() => {
     const output = document.querySelector("output");
     output.innerHTML = 140;
   }
+  // ------------------------------------------------
 
+  // gets the pre loaded tweets
   const loadTweets = () => {$.ajax("http://localhost:8080/tweets/", {method: "GET"})
     .then((data) => {
       renderTweet(data);
     })}
-
-
     loadTweets();
 
+    // on click
   $("#addTweet").submit(handlingSubmit);
 });
