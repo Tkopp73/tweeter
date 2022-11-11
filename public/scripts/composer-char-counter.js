@@ -1,10 +1,8 @@
 
-
 $(document).ready(() => {
 
   const textArea  = document.querySelector("textarea");
   const output = document.querySelector("output");
-  console.log("hello world");
   textArea.addEventListener(('input'), (e) => {
     let outputCount = 140;
     let length = textArea.value.length;

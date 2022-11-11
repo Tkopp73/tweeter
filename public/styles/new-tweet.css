@@ -24,15 +24,12 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #d8f0de;
-  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
   margin: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
-
 }
-
 
 textarea {
   width: 100%;
   border-bottom: 3px solid #2c2c2c;
 }
+
