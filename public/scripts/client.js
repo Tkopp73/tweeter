@@ -88,7 +88,7 @@ $(document).ready(() => {
     $("#errorMessage").css("display", "none");
     newTweet();
     $("#tweet-text").val("");
-    const output = $(document).querySelector("output");
+    let output = document.querySelector(".counter");
     output.innerHTML = 140;
   }
   // ------------------------------------------------
