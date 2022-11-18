@@ -50,8 +50,8 @@ const escape = function (str) {
 
 // creates the tweet from the text line
 const newTweet = () => {
-  const name = document.getElementById("name").innerHTML;
-  const handle = document.getElementById("handle").innerHTML;
+  const name = $("#name").text();
+  const handle = $("#handle").text();
   const safeHTML = escape($("#tweet-text").val());
   const newData = {
     "user": {
@@ -71,31 +71,30 @@ const newTweet = () => {
 
 // when the document is ready
 $(document).ready(() => {
-  document.getElementById("errorMessage").style.display = "none";
-  
+  $("#errorMessage").css("display", "none");
   // -------when the submit button is clicked -------
   const handlingSubmit = event => {
     event.preventDefault();
     if ($('#tweet-text').val().length > 140) {
-      document.getElementById("errorMessage").innerHTML = '🚨Tweet too long. Use less words or create two posts🚨';
-      document.getElementById("errorMessage").style.display = "";
+      $("#errorMessage").text('🚨Tweet too long. Use less words or create two posts🚨');
+      $("#errorMessage").css("display", "");
       return;
     } else if ($('#tweet-text').val().length === 0) {
-      document.getElementById("errorMessage").innerHTML = '🚨Please write something. Not even going to try?🚨';
-      document.getElementById("errorMessage").style.display = "";
+      $("#errorMessage").text('🚨Please write something. Not even going to try?🚨');
+      $("#errorMessage").css("display", "");
       return;
     }
     
-    document.getElementById("errorMessage").style.display = "none";
+    $("#errorMessage").css("display", "none");
     newTweet();
     $("#tweet-text").val("");
-    const output = document.querySelector("output");
+    const output = $(document).querySelector("output");
     output.innerHTML = 140;
   }
   // ------------------------------------------------
 
   // gets the pre loaded tweets
-  const loadTweets = () => {$.ajax("http://localhost:8080/tweets/", {method: "GET"})
+  const loadTweets = () => {$.ajax("/tweets/", {method: "GET"})
     .then((data) => {
       renderTweet(data);
     })}
